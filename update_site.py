@@ -43,7 +43,7 @@ for file in os.listdir(directory):
             )
             content = content.replace(
                 '<a href="fakulteler.html" class="btn">Tüm Fakülteler</a>',
-                '<a href="https://www.samsun.edu.tr/fakulteler" class="btn">Detayları İncele</a>'
+                '<a href="fakulteler.html" class="btn">Detayları İncele</a>'
             )
 
         if file == 'iletisim.html':
@@ -67,21 +67,21 @@ for file in os.listdir(directory):
         if file == 'ogrenci.html':
             content = content.replace(
                 '<a href="#" class="btn">Sisteme Giriş</a>',
-                '<a href="https://obs.samsun.edu.tr/" class="btn">Sisteme Giriş</a>'
+                '<a href="#" class="btn">Sisteme Giriş</a>'
             )
             content = content.replace(
                 '<a href="#" class="btn">Başvuru Sayfası</a>',
-                '<a href="https://sks.samsun.edu.tr/" class="btn">Burs Başvurusu</a>'
+                '<a href="#" class="btn">Burs Başvurusu</a>'
             )
             
         if file == 'fakulteler.html':
             content = content.replace(
                 '<a href="muhendislik.html" class="btn">Detaylı İncele</a>',
-                '<a href="https://muhendislik.samsun.edu.tr/" class="btn">Detayları İncele</a>'
+                '<a href="muhendislik.html" class="btn">Detayları İncele</a>'
             )
             content = content.replace(
                 '<a href="#" class="btn">Detaylı İncele</a>',
-                '<a href="https://www.samsun.edu.tr/" class="btn">Detayları İncele</a>'
+                '<a href="#" class="btn">Detayları İncele</a>'
             )
 
         if file == 'kampus.html':

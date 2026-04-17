@@ -64,7 +64,7 @@ header.scrolled {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 25px 40px;
     display: flex;
@@ -88,43 +88,37 @@ header.scrolled .nav-container {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 nav ul li a {
     color: var(--white);
+    background-color: var(--navy-blue);
+    width: 130px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
     font-weight: 600;
-    font-size: 0.9rem;
-    position: relative;
-    padding-bottom: 5px;
-    opacity: 0.9;
-    transition: opacity var(--transition-speed);
+    font-size: 0.85rem;
+    box-sizing: border-box;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
 }
 
 nav ul li a:hover {
-    opacity: 1;
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: var(--white);
-    transition: width var(--transition-speed) ease;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
+    background-color: var(--navy-light);
+    transform: translateY(-2px);
 }
 
 /* Hero Section with YouTube Background */
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,8 +132,8 @@ nav ul li a:hover::after {
     transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vw;
-    min-height: 100vh;
-    min-width: 177.77vh;
+    min-height: 95vh;
+    min-width: 168.88vh;
     z-index: -1;
     pointer-events: none;
 }
