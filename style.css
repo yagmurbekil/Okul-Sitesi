@@ -24,7 +24,6 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-light);
     line-height: 1.6;
-    /* Page Transition fade effect */
     animation: fadeIn 0.6s ease-out forwards;
 }
 
@@ -46,7 +45,6 @@ a {
     transition: color var(--transition-speed);
 }
 
-/* Header & Navigation */
 header {
     position: fixed;
     top: 0;
@@ -57,7 +55,6 @@ header {
     background-color: transparent;
 }
 
-/* Scrolled Header Class */
 header.scrolled {
     background-color: var(--navy-blue);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
@@ -117,7 +114,6 @@ nav ul li a:hover {
     box-shadow: 0 15px 40px rgba(0, 33, 71, 0.1);
 }
 
-/* Hero Section with YouTube Background */
 .hero {
     position: relative;
     width: 100%;
@@ -148,7 +144,6 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     background: rgba(0, 33, 71, 0.55);
-    /* Deep blue overlay 55% */
     z-index: 2;
 }
 
@@ -177,7 +172,6 @@ nav ul li a:hover {
     opacity: 0.9;
 }
 
-/* Main Content Container */
 .container {
     max-width: 1200px;
     margin: 100px auto;
@@ -185,7 +179,6 @@ nav ul li a:hover {
     border-bottom: 1px solid rgba(0, 33, 71, 0.1);
 }
 
-/* Section Titles */
 h2 {
     font-size: 2.5rem;
     color: var(--navy-blue);
@@ -195,7 +188,6 @@ h2 {
     letter-spacing: -1px;
 }
 
-/* Card Layout */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -259,7 +251,6 @@ h2 {
     object-fit: cover;
 }
 
-/* General Pages Hero */
 .page-hero {
     height: 40vh;
     min-height: 300px;
@@ -277,7 +268,6 @@ h2 {
     letter-spacing: -1px;
 }
 
-/* Footer Section */
 footer {
     background-color: var(--navy-dark);
     color: var(--white);
@@ -325,10 +315,8 @@ footer {
     opacity: 0.5;
 }
 
-/* Mesaj kutusunun arka planı (başlangıçta gizli) */
 .success-overlay {
     display: none;
-    /* Gizle */
     position: fixed;
     top: 0;
     left: 0;
@@ -340,13 +328,10 @@ footer {
     z-index: 1000;
 }
 
-/* Linkte #basari olduğunda bu stili çalıştır */
 .success-overlay:target {
     display: flex;
-    /* Görünür yap */
 }
 
-/* Mesaj kutusu tasarımı */
 .success-box {
     background: white;
     padding: 30px;
@@ -365,7 +350,6 @@ footer {
     border-radius: 5px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 992px) {
     .hero-content h1 {
         font-size: 3.5rem;
@@ -410,7 +394,6 @@ footer {
     }
 }
 
-/* Academic Staff List Styles */
 .academic-list {
     display: flex;
     flex-direction: column;
@@ -453,7 +436,6 @@ footer {
     font-weight: 600;
 }
 
-/* News List Card Styles */
 .news-list {
     display: flex;
     flex-direction: column;
