@@ -5,7 +5,7 @@
     --navy-light: #003366;
     --navy-dark: #00112b;
     --white: #ffffff;
-    --bg-light: #f8fafc;
+    --bg-light: #f9f9fb;
     --text-primary: #1e293b;
     --text-secondary: #475569;
     --shadow-soft: 0 10px 40px rgba(0, 33, 71, 0.05);
@@ -95,7 +95,8 @@ nav ul {
 
 nav ul li a {
     color: var(--white);
-    background-color: var(--navy-blue);
+    background-color: rgba(0, 33, 71, 0.85);
+    backdrop-filter: blur(5px);
     width: 110px;
     height: 42px;
     display: flex;
@@ -106,12 +107,14 @@ nav ul li a {
     font-weight: 600;
     font-size: 13px;
     box-sizing: border-box;
-    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    box-shadow: 0 10px 30px rgba(0, 33, 71, 0.05);
+    transition: all 0.4s ease;
 }
 
 nav ul li a:hover {
     background-color: var(--navy-light);
     transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0, 33, 71, 0.1);
 }
 
 /* Hero Section with YouTube Background */
@@ -161,16 +164,25 @@ nav ul li a:hover {
 .hero-content h1 {
     font-size: 4.5rem;
     font-weight: 800;
-    letter-spacing: -1.5px;
+    letter-spacing: -1px;
     line-height: 1.1;
     text-shadow: 0 10px 30px rgba(0, 33, 71, 0.4);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
 }
 
 /* Main Content Container */
 .container {
     max-width: 1200px;
     margin: 100px auto;
-    padding: 0 40px;
+    padding: 0 40px 100px;
+    border-bottom: 1px solid rgba(0, 33, 71, 0.1);
 }
 
 /* Section Titles */
@@ -180,7 +192,7 @@ h2 {
     margin-bottom: 60px;
     text-align: center;
     font-weight: 800;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
 }
 
 /* Card Layout */
@@ -229,12 +241,14 @@ h2 {
     border-radius: 8px;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    box-shadow: 0 10px 30px rgba(0, 33, 71, 0.05);
+    transition: all 0.4s ease;
 }
 
 .btn:hover {
     background-color: var(--navy-light);
     transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0, 33, 71, 0.1);
 }
 
 .modern-img {
@@ -409,17 +423,18 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8fafc;
+    background-color: rgba(248, 250, 252, 0.8);
+    backdrop-filter: blur(5px);
     padding: 20px 30px;
     border-radius: 4px;
     border-left: 4px solid var(--navy-blue);
-    box-shadow: 0 2px 10px rgba(0, 33, 71, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 10px 30px rgba(0, 33, 71, 0.05);
+    transition: all 0.4s ease;
 }
 
 .academic-row:hover {
     transform: translateX(5px);
-    box-shadow: 0 4px 15px rgba(0, 33, 71, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 33, 71, 0.1);
 }
 
 .ac-info h3 {
@@ -436,4 +451,86 @@ footer {
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
+}
+
+/* News List Card Styles */
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.news-card {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 33, 71, 0.05);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 33, 71, 0.1);
+}
+
+.news-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.news-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.news-content h3 {
+    color: var(--navy-blue);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.news-content p {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.news-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: var(--navy-blue);
+    color: var(--white);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 5px 15px rgba(0, 33, 71, 0.05);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.news-btn:hover {
+    background-color: var(--navy-light);
+    transform: translateY(-2px);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .news-card {
+        flex-direction: column;
+    }
+    
+    .news-img {
+        width: 100%;
+        height: 250px;
+    }
 }
